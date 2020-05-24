@@ -27,28 +27,37 @@ namespace lottery
 
         private void lotteryButton_Click(object sender, EventArgs e)
         {
-            num1 = numberMaker.Next(1, MAX);
-            num2 = numberMaker.Next(1, MAX);
-            while (num2 == num1)
+            do
+            {
+                num1 = numberMaker.Next(1, MAX);
+                num2 = numberMaker.Next(1, MAX);
+            }
+            while (num2 == num1);
+            do
             {
                 num2 = numberMaker.Next(1, MAX);
             }
-            while (num3 == num2)//
+            while (num3 == num2);
+            do
             {
                 num3 = numberMaker.Next(1, MAX);
             }
-            while (num4 == num3)
+            while (num4 == num3);
+            do
             {
                 num4 = numberMaker.Next(1, MAX);
             }
-            while (num5 == num4)//
+            while (num5 == num4);
+            do
             {
                 num5 = numberMaker.Next(1, MAX);
             }
-            while (num6 == num5)
+            while (num6 == num5);
+            do
             {
                 num6 = numberMaker.Next(1, MAX);
             }
+            while (num6 == num5);
             outputLabel.Text = "your numbers are: " + num1 +" "+ num2 + " " + num3 + " " + num4 + " " + num5 + " " + num6;
         }
     }
